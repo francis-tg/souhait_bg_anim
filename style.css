@@ -1,0 +1,99 @@
+:root {
+  --gradient: linear-gradient(
+  	45deg,
+  	#845ec2,
+  	#d65bd1,
+  	#ff6f91,
+  	#ff9671,
+  	#ffc75f,
+  	#f9f871
+  );
+}
+
+body {
+  font-family: basic-sans, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #333;
+  background: #ddd;
+  background-size: 300%;
+  background-image: var(--gradient);
+  background-size: 400%;
+  letter-spacing: 3px;
+  background-size: 400%;
+  animation: bg-animation 20s infinite alternate;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.2823529412);
+  width: 70vw;
+  padding: 3em;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 20px;
+}
+.container h1 {
+  border: 0 0 0.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 5rem;
+  color: white;
+  line-height: 1.5;
+  margin: 0;
+  background-image: var(--gradient);
+  background-clip: text;
+  background-size: 400%;
+  animation: bg-animation 20s infinite alternate;
+  text-align: center;
+}
+.container .btn {
+  border: 0;
+  padding: 0.5em 1.5em;
+  font-size: 2rem;
+  background-image: var(--gradient);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 1s;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.container .btnfocus, .container .btn:hover {
+  background-position: right;
+  cursor: pointer;
+}
+.container .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container .socials i {
+  font-size: 40px;
+  color: white;
+}
+.container .socials a {
+  text-decoration: none;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
